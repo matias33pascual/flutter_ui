@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/features_exports.dart';
+import 'package:flutter_ui/features/layout/index.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,10 +8,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Learning Flutter UI',
-      home: GirdViewExample(exampleNumber: 1),
+      home: _buildHome(),
     );
   }
+
+  Scaffold _buildHome() => const Scaffold(body: ContainerExample());
 }
