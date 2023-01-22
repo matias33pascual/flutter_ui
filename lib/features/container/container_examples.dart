@@ -2,14 +2,13 @@
 
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/constants/constants.dart';
 
-class ContainerExample extends StatelessWidget {
-  const ContainerExample({Key? key}) : super(key: key);
+class ContainerExamples extends StatelessWidget {
+  const ContainerExamples({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return _buildContainerWithProperties();
+    return _buildLightBlueContainer();
   }
 
   /* helper function that builds light blue Container */
@@ -109,6 +108,7 @@ class ContainerExample extends StatelessWidget {
     );
   }
 
+  /* Container example of container properties */
   Widget _buildContainerWithProperties() {
     return Center(
       child: Container(
@@ -169,14 +169,14 @@ class ContainerExample extends StatelessWidget {
   /* Container with clipBehavior property */
   Widget _buildContainerWithClipBehavior() {
     return Container(
-      decoration: ShapeDecoration(
-        shape: const CircleBorder(),
-        image: DecorationImage(
-          image: AssetImage(AssetsImages.dragonBall.getRoute()),
+      width: 400,
+      height: 400,
+      clipBehavior: Clip.antiAlias,
+      decoration: const ShapeDecoration(
+        color: Colors.blueAccent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(30)),
         ),
-        shadows: const [
-          BoxShadow(blurRadius: 5, offset: Offset(0, 10)),
-        ],
       ),
     );
   }

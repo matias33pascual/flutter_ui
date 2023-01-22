@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/features/layout/index.dart';
+import 'package:flutter_ui/features/utils/examples_enum.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,5 +15,5 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Scaffold _buildHome() => const Scaffold(body: ContainerExample());
+  Scaffold _buildHome() => Scaffold(body: Examples.column.getExample());
 }
